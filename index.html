@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!-- saved from url=(0143)https://digital.uniateneu.edu.br/pluginfile.php/997756/mod_resource/content/1/controle%20de%20fila%20de%20atendimento%20-%202025.1.html?embed=1 -->
+<html lang="pt-BR"><!-- Início do documento HTML, define a linguagem como Português Brasileiro --><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <!-- Cabeçalho do documento, contém metadados e links -->
+     <!-- Define a codificação de caracteres como UTF-8 (suporta acentos, etc.) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura a viewport para design responsivo em dispositivos móveis -->
+    <title>Controle de Fila de Atendimento - UniATENEU</title> <!-- Título que aparece na aba do navegador -->
+    <link href=style.css rel="stylesheet">
+     <!-- Fim do bloco CSS -->
+</head> <!-- Fim do head -->
+<body> <!-- Início do corpo visível -->
+    <div class="app-container"> <!-- Container principal -->
+
+        <!-- Bloco do Cabeçalho com Logo e Info -->
+        <div class="page-header">
+            <!-- Imagem da logo carregada da URL fornecida -->
+            <img src="./Logo20UNIATENEU-2.png" alt="Logo UniATENEU">
+            <!-- Div com as informações do curso/disciplina -->
+            <div class="header-info">
+                <p>Análise e Desenvolvimento de Sistemas</p>
+                <p>Programação Web</p>
+                <p>2025.1</p>
+            </div>
+        </div>
+        <!-- Fim do Bloco do Cabeçalho -->
+
+        <!-- Título da aplicação -->
+        <h1>Sistema de Gerenciamento de Fila</h1>
+
+        <!-- Painel para exibir a senha atual -->
+        <div class="panel">
+            <h2>Senha Atual em Atendimento:</h2>
+            <!-- O conteúdo deste parágrafo será atualizado pelo JavaScript -->
+            <p id="senhaAtual" class="senha-atual-display">--</p>
+        </div>
+
+        <!-- Div para os botões de controle -->
+        <div class="controls">
+            <!-- Botão para gerar uma nova senha -->
+            <button id="btnGerarSenha">Gerar Nova Senha</button>
+            <!-- Botão para chamar a próxima senha da fila -->
+            <button id="btnChamarSenha" disabled="">Chamar Próxima Senha</button>
+        </div>
+
+        <!-- Painel para exibir a fila de espera -->
+        <div class="panel">
+            <h2>Fila de Espera:</h2>
+            <!-- O conteúdo desta div será atualizado pelo JavaScript -->
+            <div id="filaEspera" class="fila-espera-display empty">Fila vazia</div>
+        </div>
+
+    </div> <!-- Fim do .app-container -->
+
+    <script src="script.js"></script> <!-- Fim do bloco JavaScript -->
+ 
+ </body><!-- Fim do corpo --></html>

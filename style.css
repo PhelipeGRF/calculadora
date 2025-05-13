@@ -1,0 +1,196 @@
+/* Início do bloco de estilos CSS embutido */
+        /* Estilos Gerais */
+        body { /* Estiliza o corpo inteiro da página */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Define a fonte padrão */
+            line-height: 1.6; /* Espaçamento entre linhas para melhor leitura */
+            margin: 0; /* Remove margens padrão do navegador */
+            padding: 20px; /* Adiciona um espaço interno na página */
+            background-color: #f0f4f8; /* Cor de fundo cinza-azulado claro */
+            color: #333; /* Cor padrão do texto */
+            display: flex; /* Usa Flexbox para alinhar o conteúdo */
+            justify-content: center; /* Centraliza o container principal horizontalmente */
+            align-items: flex-start; /* Alinha o container no topo (útil se o conteúdo for alto) */
+            min-height: 100vh; /* Garante que o corpo ocupe pelo menos toda a altura da tela */
+        }
+
+        .app-container { /* Estiliza o container principal da aplicação */
+            background-color: #ffffff; /* Fundo branco */
+            padding: 25px 35px; /* Espaçamento interno */
+            border-radius: 10px; /* Bordas arredondadas */
+            box-shadow: 0 5px 20px rgba(0, 50, 100, 0.1); /* Sombra suave */
+            max-width: 650px; /* Largura máxima */
+            width: 100%; /* Ocupa 100% da largura disponível até o máximo */
+            margin: 20px; /* Margem externa */
+            /* text-align: center; Removido para melhor controle dos elementos filhos */
+        }
+
+        /* Estilos para Logo e Cabeçalho */
+        .page-header { /* Estiliza a div que contém a logo e as informações */
+            text-align: center; /* Centraliza a logo e o bloco de texto */
+            margin-bottom: 25px; /* Espaço abaixo do cabeçalho */
+            border-bottom: 1px solid #eee; /* Linha separadora sutil abaixo do cabeçalho */
+            padding-bottom: 20px; /* Espaço entre o conteúdo do cabeçalho e a linha */
+        }
+
+        .page-header img { /* Estiliza a imagem da logo */
+            max-width: 280px; /* Define a largura máxima da logo */
+            height: auto; /* Mantém a proporção da imagem */
+            margin-bottom: 15px; /* Espaço abaixo da logo */
+        }
+
+        .header-info { /* Estiliza a div com as informações do curso */
+            color: #555; /* Cor do texto do cabeçalho (cinza escuro) */
+            font-size: 0.95em; /* Tamanho da fonte ligeiramente menor */
+            line-height: 1.4; /* Espaçamento entre as linhas do cabeçalho */
+        }
+         .header-info p { /* Estiliza os parágrafos dentro do cabeçalho informativo */
+             margin: 2px 0; /* Pouco espaço vertical entre as linhas */
+         }
+
+
+        /* --- Restante do CSS da Fila (comentários originais mantidos/adicionados) --- */
+        h1 { /* Estiliza o título principal da aplicação ("Sistema de Gerenciamento de Fila") */
+            text-align: center; /* Centraliza o texto do H1 */
+            color: #2c3e50; /* Cor azul escuro */
+            border-bottom: 2px solid #3498db; /* Linha azul abaixo */
+            padding-bottom: 10px; /* Espaço abaixo do texto antes da linha */
+            margin-bottom: 25px; /* Espaço abaixo da linha */
+            font-size: 1.8em; /* Tamanho da fonte (ajustado para dar espaço ao cabeçalho da página) */
+        }
+
+        h2 { /* Estiliza os subtítulos (Senha Atual, Fila de Espera) */
+            color: #34495e; /* Cor azul acinzentado */
+            margin-top: 20px; /* Espaço acima */
+            margin-bottom: 10px; /* Espaço abaixo */
+            font-size: 1.4em; /* Tamanho da fonte */
+            text-align: left; /* Alinha à esquerda dentro dos painéis */
+        }
+
+        .panel { /* Estiliza as seções/painéis que mostram a senha atual e a fila */
+            background-color: #ecf0f1; /* Fundo cinza claro */
+            border: 1px solid #bdc3c7; /* Borda cinza */
+            padding: 15px 20px; /* Espaçamento interno */
+            margin-bottom: 20px; /* Espaço abaixo */
+            border-radius: 6px; /* Bordas arredondadas */
+            text-align: left; /* Alinha o texto à esquerda por padrão dentro do painel */
+        }
+
+        .senha-atual-display { /* Estiliza especificamente a área da senha atual em atendimento */
+            font-size: 3em; /* Fonte bem grande para destaque */
+            font-weight: bold; /* Negrito */
+            color: #e74c3c; /* Cor vermelha para chamar atenção */
+            text-align: center; /* Centraliza a senha exibida */
+            padding: 15px; /* Espaçamento interno */
+            background-color: #fef5e7; /* Fundo bege claro */
+            border: 2px dashed #f39c12; /* Borda laranja tracejada */
+            border-radius: 4px; /* Bordas levemente arredondadas */
+            min-height: 60px; /* Altura mínima para manter o layout mesmo sem senha */
+            display: flex; /* Usa Flexbox para centralizar verticalmente o conteúdo */
+            align-items: center; /* Centraliza verticalmente */
+            justify-content: center; /* Centraliza horizontalmente */
+        }
+
+        .fila-espera-display { /* Estiliza a área que mostra a lista de senhas na fila */
+            min-height: 60px; /* Altura mínima */
+            background-color: #fdfefe; /* Fundo quase branco */
+            border: 1px solid #d5dbdb; /* Borda cinza claro */
+            padding: 10px; /* Espaçamento interno */
+            border-radius: 4px; /* Bordas arredondadas */
+            display: flex; /* Usa Flexbox para alinhar as senhas */
+            flex-wrap: wrap; /* Permite que as senhas quebrem para a próxima linha se não couberem */
+            gap: 8px; /* Espaço entre as senhas (horizontal e vertical) */
+            align-items: center; /* Alinha verticalmente (útil se tiver poucas senhas e quebrar linha) */
+        }
+
+        .fila-espera-display .senha-item { /* Estiliza cada 'badge' de senha individual na fila */
+            display: inline-block; /* Comportamento de bloco mas permite ficar ao lado de outros */
+            background-color: #3498db; /* Fundo azul */
+            color: white; /* Texto branco */
+            padding: 5px 12px; /* Espaçamento interno */
+            margin: 0; /* Margem zero (o 'gap' no container flex cuida do espaçamento) */
+            border-radius: 15px; /* Formato de "badge" arredondado */
+            font-family: 'Courier New', Courier, monospace; /* Fonte monoespaçada para visual de 'senha' */
+            font-size: 1.1em; /* Tamanho da fonte */
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Sombra sutil */
+        }
+
+        .fila-espera-display.empty { /* Estilo ADICIONAL quando a div tem a classe 'empty' (adicionada via JS) */
+            color: #7f8c8d; /* Cor cinza para a mensagem "Fila vazia" */
+            font-style: italic; /* Itálico */
+            justify-content: center; /* Centraliza a mensagem "Fila vazia" dentro da div */
+        }
+
+        .controls { /* Estiliza a div que agrupa os botões de controle */
+            margin-bottom: 25px; /* Espaço abaixo dos botões */
+            display: flex; /* Usa Flexbox para alinhar os botões */
+            justify-content: center; /* Centraliza os botões horizontalmente */
+            gap: 15px; /* Espaço entre os botões */
+        }
+
+        button { /* Estilização geral para TODOS os botões */
+            background-color: #2ecc71; /* Fundo verde padrão (Gerar Senha) */
+            color: white; /* Texto branco */
+            border: none; /* Sem borda */
+            padding: 12px 20px; /* Espaçamento interno */
+            text-align: center; /* Alinhamento do texto */
+            text-decoration: none; /* Sem sublinhado */
+            font-size: 1em; /* Tamanho da fonte */
+            cursor: pointer; /* Muda o cursor para indicar clicabilidade */
+            border-radius: 5px; /* Bordas arredondadas */
+            transition: background-color 0.2s ease-in-out, transform 0.1s ease; /* Transição suave para hover/active */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.15); /* Sombra sutil */
+        }
+
+        button:hover { /* Estilo quando o mouse passa por cima do botão */
+            background-color: #27ae60; /* Verde mais escuro */
+            transform: translateY(-1px); /* Efeito leve de subir */
+        }
+
+        button:active { /* Estilo quando o botão está sendo clicado */
+            transform: translateY(1px); /* Efeito leve de descer */
+            box-shadow: 0 1px 3px rgba(0,0,0,0.2); /* Sombra menor */
+        }
+
+        button:disabled { /* Estilo quando o botão está desabilitado (via JS) */
+            background-color: #95a5a6; /* Fundo cinza */
+            cursor: not-allowed; /* Cursor indica que não é clicável */
+            box-shadow: none; /* Sem sombra */
+            transform: none; /* Sem efeito de subir/descer */
+        }
+
+        #btnChamarSenha { /* Estilo específico para o botão "Chamar Próxima Senha" */
+            background-color: #e67e22; /* Fundo laranja */
+        }
+        #btnChamarSenha:hover { /* Hover específico para este botão */
+            background-color: #d35400; /* Laranja mais escuro */
+        }
+        #btnChamarSenha:disabled { /* Estilo desabilitado específico para este botão */
+            background-color: #bdc3c7; /* Cinza mais claro */
+        }
+
+        /* Responsividade */
+        @media (max-width: 600px) { /* Aplica estilos APENAS quando a largura da tela for 600px ou menor */
+            .app-container { /* Ajusta o container principal */
+                margin: 10px;
+                padding: 15px 20px; /* Menos padding lateral */
+            }
+             .page-header img { /* Ajusta a logo */
+                 max-width: 220px; /* Logo menor em telas pequenas */
+             }
+            h1 { /* Ajusta o título principal */
+                font-size: 1.6em;
+            }
+            .senha-atual-display { /* Ajusta o display da senha atual */
+                font-size: 2.5em;
+            }
+            .controls { /* Ajusta a disposição dos botões */
+                flex-direction: column; /* Empilha os botões verticalmente */
+            }
+            button { /* Faz os botões ocuparem toda a largura */
+                width: 100%;
+                margin-bottom: 10px; /* Adiciona espaço entre botões empilhados */
+            }
+            .controls button:last-child { /* Remove espaço extra do último botão */
+                margin-bottom: 0;
+            }
+        }
